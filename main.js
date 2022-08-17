@@ -6,23 +6,6 @@ phina.globalize(); // phina.jsがこれで使えるようになります。
 // DisplaySceneという「画面全体のボス」から、子供のMainSceneという「ゲームプレイ画面」を作りました
 phina.define('MainScene', {
   superClass: 'DisplayScene',
-  init: function() { // ここはコンストラクタです。一番最初に一回だけやる処理のこと。
-    this.superInit(); // 親クラス（DisplayScene）のコンストラクタを呼んでます。
-                      // ←←他にもやりたいことがあるときは、ここに追記していきます。
-  }
-});
-
-// ここがゲームスタートの入り口です
-// 今はGameSceneという画面が１つあるだけなので、ただ画面が表示されるだけです。
-phina.main(function() {
-  var app = GameApp({
-    startLabel: 'main'  // 色んな画面を増やしたいときはここに追加していきます。そのうちやりましょう。
-  });
-  app.run();
-});
-
-phina.define('MainScene', {
-  superClass: 'DisplayScene',
   init: function() { // ここはコンストラクタです。要は一番最初に一回だけやる処理のこと。
     this.superInit(); // 親クラス（DisplayScene）のコンストラクタを呼んでます。
 
@@ -40,4 +23,13 @@ phina.define('MainScene', {
     // つまり上の「var label =」から始まって、下の「gridY.center());」までが１行なんです。
       .setPosition(this.gridX.center(), this.gridY.center()); // 位置を指定
   }
+});
+
+// ここがゲームスタートの入り口です
+// 今はGameSceneという画面が１つあるだけなので、ただ画面が表示されるだけです。
+phina.main(function() {
+  var app = GameApp({
+    startLabel: 'main'  // 色んな画面を増やしたいときはここに追加していきます。そのうちやりましょう。
+  });
+  app.run();
 });
