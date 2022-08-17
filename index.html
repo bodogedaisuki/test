@@ -2,21 +2,17 @@
 
 <html>
   <head>
-    <meta charset='utf-8' />
-    <!-- 画面の横幅にあわせた窓をつくる。ユーザがズームできないように設定している-->
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <!-- ブラウザのタブのところに表示される文字です　-->
-    <title>　ゲームつくるぞー | phina.js</title>
-    <!-- phina.js をダウンロードして読み込む -->
-    <script src='http://cdn.rawgit.com/phi-jp/phina.js/v0.2.0/build/phina.js'></script>
+    <title>${title}</title>
+    <meta name="description" content="${description}" />
 
-    <!-- ここで自分で作ったJavascriptファイルを読み込んでいる-->
-    <script src='main.js'></script>
+    <style>${style}</style>
   </head>
   <body>
-    <!-- 肝心のHTMLの中身は実はからっぽなんです・・・！　-->
-    <!-- Javascript作るだけでゲームはうごきます -->
+    <script src="https://cdn.jsdelivr.net/gh/phinajs/phina.js@v0.2.3/build/phina.js"></script>
+    <script>${script}</script>
   </body>
 </html>
